@@ -7,7 +7,7 @@
   "scripts": {
     "dev": "tsx watch src/server.ts",
     "worker": "tsx src/workers/index.ts",
-    "build": "tsc -p tsconfig.build.json",
+    "build": "npm run migrate && npm run seed && tsc -p tsconfig.build.json",
     "start": "node dist/server.js",
     "start:worker": "node dist/workers/index.js",
     "migrate": "tsx src/db/migrate.ts",
